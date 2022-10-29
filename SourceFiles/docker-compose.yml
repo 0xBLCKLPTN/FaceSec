@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:14.5
+    restart: always
+    environment:
+      POSTGRES_DB: 'FaceSec'
+      POSTGRES_USER: 'hero'
+      POSTGRES_PASSWORD: 'hero'
+    ports:
+      - '5432:5432'
+  
+volumes:
+  db:
+    driver: local
